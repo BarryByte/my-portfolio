@@ -2,8 +2,7 @@ import { motion } from 'framer-motion'
 import { Download, Eye, FileText } from 'lucide-react'
 
 export default function Resume() {
-    // You can replace this with an actual PDF path
-    const resumeUrl = '/resume.pdf'
+    const resumeUrl = '/assets/abhay-resume.pdf'
 
     return (
         <section id="resume" className="section-padding">
@@ -65,7 +64,7 @@ export default function Resume() {
                             </a>
                         </div>
 
-                        
+
                     </div>
                 </motion.div>
             </div>
