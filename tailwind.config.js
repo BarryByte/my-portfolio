@@ -1,72 +1,58 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js}"],
+export default {
+  darkMode: 'class',
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
-        'neon-green': '#39ff14',
-        'neon-pink': '#ff00ff',
-        'neon-blue': '#00e5ff',
-        'neon-yellow': '#ffff33',
-        'neon-orange': '#ff9900',
-        'neon-red': '#ff073a',
-        'neon-purple': '#9400d3',
-        'neon-aqua': '#00ffff',
-        'neon-teal': '#0ff1ce',
-        'neon-magenta': '#ff0080',
-        'neon-lime': '#aaff00',
-        'neon-cyan': '#00bfff',
-        'neon-amber': '#ffbf00',
-        'neon-fuchsia': '#ff77ff',
-        'neon-turquoise': '#40e0d0',
+        primary: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+          950: '#082f49',
+        },
+        surface: {
+          50: '#fafafa',
+          100: '#f4f4f5',
+          200: '#e4e4e7',
+          300: '#d4d4d8',
+          800: '#27272a',
+          900: '#18181b',
+          950: '#09090b',
+        }
       },
-      boxShadow: {
-        'neon-green': '0 0 10px #39ff14, 0 0 20px #39ff14',
-        'neon-pink': '0 0 10px #ff00ff, 0 0 20px #ff00ff',
-        'neon-blue': '0 0 10px #00e5ff, 0 0 20px #00e5ff',
-        'neon-yellow': '0 0 10px #ffff33, 0 0 20px #ffff33',
-        'neon-orange': '0 0 10px #ff9900, 0 0 20px #ff9900',
-        'neon-red': '0 0 10px #ff073a, 0 0 20px #ff073a',
-        'neon-purple': '0 0 10px #9400d3, 0 0 20px #9400d3',
-        'neon-aqua': '0 0 10px #00ffff, 0 0 20px #00ffff',
-        'neon-teal': '0 0 10px #0ff1ce, 0 0 20px #0ff1ce',
-        'neon-magenta': '0 0 10px #ff0080, 0 0 20px #ff0080',
-        'neon-lime': '0 0 10px #aaff00, 0 0 20px #aaff00',
-        'neon-cyan': '0 0 10px #00bfff, 0 0 20px #00bfff',
-        'neon-amber': '0 0 10px #ffbf00, 0 0 20px #ffbf00',
-        'neon-fuchsia': '0 0 10px #ff77ff, 0 0 20px #ff77ff',
-        'neon-turquoise': '0 0 10px #40e0d0, 0 0 20px #40e0d0',
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'slide-in-right': 'slideInRight 0.5s ease-out',
       },
-
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideInRight: {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+      },
     },
   },
   plugins: [],
-};
-
-// Aesthetic Combinations:
-// Vibrant Neon Rainbow:
-
-// Green (neon-green)
-// Yellow (neon-yellow)
-// Orange (neon-orange)
-// Pink (neon-pink)
-// Purple (neon-purple)
-// Cool and Calm:
-
-// Aqua (neon-aqua)
-// Teal (neon-teal)
-// Turquoise (neon-turquoise)
-// Cyan (neon-cyan)
-// Lime (neon-lime)
-// Warm and Bold:
-
-// Red (neon-red)
-// Amber (neon-amber)
-// Orange (neon-orange)
-// Magenta (neon-magenta)
-// Fuchsia (neon-fuchsia)
-// Electric Contrast:
-
-// Purple (neon-purple) with Lime (neon-lime)
-// Blue (neon-blue) with Pink (neon-pink)
-// Cyan (neon-cyan) with Yellow (neon-yellow)
+}
